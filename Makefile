@@ -1,18 +1,18 @@
 
 build:
-	cd mi101/notebooks; make
-	jb build mi101
+	cd ds4e/notebooks; make
+	jb build ds4e
 
 package:
-	cd mi101/notebooks; make
+	cd ds4e/notebooks; make
 	mkdir -p exercises
 	mkdir -p exercises/notebooks
 	mkdir -p exercises/notebooks/data
 	touch exercises/notebooks/data/.gitignore
 	mkdir -p exercises/images
-	cp -fr mi101/notebooks/*assignment.ipynb exercises/notebooks/.
-	cp -fr mi101/notebooks/check_install.ipynb exercises/.
-	cp -fr mi101/images exercises/.
+	cp -fr ds4e/notebooks/*assignment.ipynb exercises/notebooks/.
+	cp -fr ds4e/notebooks/check_install.ipynb exercises/.
+	cp -fr ds4e/images exercises/.
 	cp -fr requirements.txt exercises/.
 
 zip: package
@@ -20,14 +20,14 @@ zip: package
 	rm -r exercises
 
 open:
-	open mi101/_build/html/index.html
+	open ds4e/_build/html/index.html
 
 links:
 	# Bibtex database
 	cp -rf ~/Git/zachs_macros/pubs.bib bibtex_database.bib
 
 dkbuild: package
-	docker build -t mi101 .
+	docker build -t ds4e .
 	rm -r exercises
 
 dkrun:
@@ -35,4 +35,4 @@ dkrun:
 
 clean:
 	jb clean .
-	cd mi101/notebooks; make clean
+	cd ds4e/notebooks; make clean
