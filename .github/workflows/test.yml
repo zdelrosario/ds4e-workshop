@@ -26,4 +26,4 @@ jobs:
         if [ -f req-test.txt ]; then pip install -r req-test.txt; fi
     - name: Test notebooks
       run: |
-        cd mi101/notebooks; pytest --nbmake *master.ipynb
+        cd ds4e/notebooks; pytest --nbmake *master.ipynb
