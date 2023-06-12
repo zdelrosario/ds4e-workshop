@@ -1,35 +1,56 @@
-# Materials Informatics 101
+# Data Science for Engineers (2023 Workshop)
 
-Informatics is the use of computational tools (e.g. AI, machine learning) to access and make sense of data. Materials Informatics has the potential to accelerate scientific inquiry and support novel insights. However, informatics tools are typically marketed to the biological sciences, financial sector, and "Big Tech"---it is not immediately clear how to use "cat-detector technology" to support serious materials science!
+This is the website for the Data Science for Engineers 2023 summer kickoff workshop. The workshop will be held on Saturday June 24 and Sunday June 25. This page gives important information for participating in the workshop.
 
-The materials on this site are part of a hands-on workshop aimed at training material scientists to use programming-based informatics tools. In this workshop, you will create reproducible data workflows, automate tedious data extraction, visualize data for exploration, and apply AI/ML models for their predictive capabilities.
+## Getting set up
 
+Please make sure to follow the [software setup](https://zdelrosario.github.io/ds4e-workshop/setup.html) instructions prior to the workshop.
 
-## Wellesley 2022 Workshop
+## Schedule
 
-This is the schedule for MI 101 at Wellesley in March of 2022.
+The following table give the schedule for the kickoff workshop.
 
-|   | Date               | Topics                                         | Notebooks      | Slides |
-|---|--------------------|------------------------------------------------|----------------|--------|
-| 1 | Thursday, March 17 | [Introduction, data extraction](00-extraction) | 00 (Day)       | [Day 1](https://docs.google.com/presentation/d/11FOD7EVf0_59XOMZ6arELrqicKkeJAps/edit?usp=sharing&ouid=110386251748498665069&rtpof=true&sd=true) |
-|   |                    | [Python introduction](01-python)               | 01 (Day)       |        |
-|   |                    | [Data wrangling and tidy data](02-tidy)        | 02 (Day)       |        |
-|   | (Take-home)        | [Programmatic data management](03-data)        | 03 (Take-home) |        |
-| 2 | Friday, March 18   | [Principles of visualization](day3-vis)        | (Activity)     | [Activity Slides](https://docs.google.com/presentation/d/1U1AdnBZdMBlL-VgQFAS3hM15gVgo2zYW/edit?usp=sharing&ouid=110386251748498665069&rtpof=true&sd=true) |
-|   |                    | [Visualizing with plotnine](04-vis)            | 04 (Day)       | [Day 2](https://docs.google.com/presentation/d/1bSDZpdv1gH9a_IMPtSKbGSFyPFuDmwgh/edit?usp=sharing&ouid=110386251748498665069&rtpof=true&sd=true) |
-|   |                    | [ML Fundamentals](05-ml)                       | 05 (Day)       |        |
+Note that the Saturday activities will be offered live in both the morning and early evening; this is to maximize the number of people who can attend the first day of activities. You only need to attend one block, as the content will be identical.
 
+For Sunday, the only block that will be offered is in the morning. However, I will record the sessions and send all materials to participants. (Unfortunately, I have some logistical travel difficulties that evening---I need to catch a plane!)
 
-## Past Offerings
+| Date              | Time      | Format                | Topics                             |
+|-------------------|-----------|-----------------------|------------------------------------|
+| (Before)          | ---       | Software installation | Python coding setup and intro      |
+| Friday, June 23   | TBD       | Office hours          | Help available for software setup! |
+|-------------------|-----------|-----------------------|------------------------------------|
+| (Morning block)   |           |                       |                                    |
+| Saturday, June 24 | 9:00 am   | Lecture               | Workshop overview                  |
+| Saturday, June 24 | 9:15 am   | Guided activity       | Data extraction                    |
+| Saturday, June 24 | 10:00 am  | Lecture               | Handling statistical variability   |
+| Saturday, June 24 | 10:45 am  | (Break)               | ---                                |
+| Saturday, June 24 | 11:00 am  | Guided programming    | Data wrangling                     |
+| Saturday, June 24 | 11:45 am  | ---                   | (End of morning session)           |
+|                   |           |                       |                                    |
+| (Evening block)   |           |                       |                                    |
+| Saturday, June 24 | 3:00 pm   | Lecture               | Workshop overview                  |
+| Saturday, June 24 | 3:15 pm   | Guided activity       | Data extraction                    |
+| Saturday, June 24 | 4:00 pm   | Lecture               | Handling statistical variability   |
+| Saturday, June 24 | 4:45 pm   | (Break)               | ---                                |
+| Saturday, June 24 | 5:00 pm   | Guided programming    | Data wrangling                     |
+| Saturday, June 24 | 5:45 pm   | ---                   | (End of morning session)           |
+|                   |           |                       |                                    |
+| Saturday, June 24 | (Evening) | Programming homework  | Programmatic data operations       |
+|-------------------|-----------|-----------------------|------------------------------------|
+| Sunday, June 25   | 9:00 am   | Lecture               | Principles of data visualization   |
+| Sunday, June 25   | 9:45 am   | Guided programming    | Visualizing data with plotnine     |
+| Sunday, June 25   | 10:45 am  | Guided programming    | Introduction to machine learning   |
+| Sunday, June 25   | 11:45 am  | Lecture               | Workshop closing                   |
 
-See the [Past Offerings](past) page for information on prior runs of this workshop, including recordings and slides.
+## Professional development course
 
+After the workshop, you can continue learning through a 4-week professional development course that will elaborate on the topics from the workshop. We'll send instructions after the workshop on how to sign up for the course!
 
-## Binder Option for Broken Python Installation
+<!-- ## Binder Option for Broken Python Installation -->
 
-If you haven't managed to get your python installation working, use the following link to launch the materials in a cloud-based environment: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zdelrosario/mi101/build)
+<!-- If you haven't managed to get your python installation working, use the following link to launch the materials in a cloud-based environment: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/zdelrosario/mi101/build) -->
 
-**Be warned that you cannot save your work in Binder!**
+<!-- **Be warned that you cannot save your work in Binder!** -->
 
 
 ## About the Author
