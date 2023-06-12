@@ -16,7 +16,7 @@ For Sunday, the only block that will be offered is in the morning. However, I wi
 
 | Date              | Time       | Format                | Topics                             |
 |-------------------|------------|-----------------------|------------------------------------|
-| (Before)          | ---        | Software installation | Python coding setup and intro      |
+| (Before)          |            | Software installation | Python coding setup and intro      |
 | Friday, June 23   | TBD        | Office hours          | Help available for software setup! |
 | Friday, June 23   | (Optional) | Programming homework  | Introduction to coding in Python   |
 |-------------------|------------|-----------------------|------------------------------------|
@@ -24,17 +24,17 @@ For Sunday, the only block that will be offered is in the morning. However, I wi
 | Saturday, June 24 | 9:00 am    | Lecture               | Workshop overview                  |
 | Saturday, June 24 | 9:15 am    | Guided activity       | Data extraction                    |
 | Saturday, June 24 | 10:00 am   | Lecture               | Handling statistical variability   |
-| Saturday, June 24 | 10:45 am   | (Break)               | ---                                |
+| Saturday, June 24 | 10:45 am   | (Break)               |                                    |
 | Saturday, June 24 | 11:00 am   | Guided programming    | Data wrangling                     |
-| Saturday, June 24 | 11:45 am   | ---                   | (End of morning session)           |
+| Saturday, June 24 | 11:45 am   |                       | (End of morning session)           |
 |                   |            |                       |                                    |
 | (Evening block)   |            |                       |                                    |
 | Saturday, June 24 | 3:00 pm    | Lecture               | Workshop overview                  |
 | Saturday, June 24 | 3:15 pm    | Guided activity       | Data extraction                    |
 | Saturday, June 24 | 4:00 pm    | Lecture               | Handling statistical variability   |
-| Saturday, June 24 | 4:45 pm    | (Break)               | ---                                |
+| Saturday, June 24 | 4:45 pm    | (Break)               |                                    |
 | Saturday, June 24 | 5:00 pm    | Guided programming    | Data wrangling                     |
-| Saturday, June 24 | 5:45 pm    | ---                   | (End of morning session)           |
+| Saturday, June 24 | 5:45 pm    |                       | (End of morning session)           |
 |                   |            |                       |                                    |
 | Saturday, June 24 | (Evening)  | Programming homework  | Programmatic data operations       |
 |-------------------|------------|-----------------------|------------------------------------|
