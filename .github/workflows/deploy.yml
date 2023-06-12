@@ -30,12 +30,12 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        cd mi101/notebooks; make; cd -
-        jupyter-book build mi101
+        cd ds4e/notebooks; make; cd -
+        jupyter-book build ds4e
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: mi101/_build/html
+        publish_dir: ds4e/_build/html
