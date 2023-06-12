@@ -11,6 +11,3 @@ sections:
   - file: vis
   - file: notebooks/04_vis_assignment
   - file: notebooks/05_ml_assignment
-- file: past
-  sections:
-  - file: past/gatech2021
