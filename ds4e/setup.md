@@ -30,7 +30,7 @@ We will work through a number of programming exercises in this workshop. We have
 consolidated the exercise notebooks and installation files in a single zip;
 download the following and unzip.
 
-- [Download this zip file](https://github.com/zdelrosario/mi101/archive/refs/heads/build.zip)
+- [Download this zip file](https://github.com/zdelrosario/ds4e-workshop/archive/refs/heads/build.zip)
 
 Save this to a stable location on your computer; for instance, your Documents folder.
 
