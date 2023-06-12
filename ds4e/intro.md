@@ -42,6 +42,14 @@ For Sunday, the only block that will be offered is in the morning. However, I wi
 | Sunday, June 25   | 10:45 am  | Guided programming    | Introduction to machine learning   |
 | Sunday, June 25   | 11:45 am  | Lecture               | Workshop closing                   |
 
+Workshop activities will take varied formats:
+
+- *Lecture* will involve me introducing ideas with slides, but I'll keep people engaged by asking you all questions.
+- A *Guided activity* will involve me demonstrating how to do something using software tools, while you get a chance to do this work on your own computer.
+- *Guided programming* is similar to a guided activity, but this emphasizes that we'll be doing programming in Python.
+- There will be optional *programming homework* between the workshop days; this is an opportunity to dig deeper into the material!
+- We will hold *office hours* before the workshop to help with any software installation woes. We'll try to make sure you can particpate fully in the workshop!
+
 ## Professional development course
 
 After the workshop, you can continue learning through a 4-week professional development course that will elaborate on the topics from the workshop. We'll send instructions after the workshop on how to sign up for the course!
