@@ -1,50 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Exercises in Machine Learning &#8212; Materials Informatics 101</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -53,553 +63,360 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/05_ml_assignment';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Past Offerings of MI 101" href="../past.html" />
     <link rel="prev" title="Visualization in Python" href="04_vis_assignment.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Materials Informatics 101</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Materials Informatics 101
-  </a>
- </li>
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Materials Informatics 101</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Data Science for Engineers (2023 Workshop)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../setup.html">Software Setup</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../exercises.html">Exercise Notebooks</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_python_assignment.html">Intro to Python and Jupyter Notebooks</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="01_tabula-webplotdigitizer_assignment.html">Data Extraction and Management</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="02_tidy_assignment.html">Intro to Data Wrangling and Tidy Data</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="03_data_assignment.html">Programmatic Data Operations</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../vis.html">Principles of Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_vis_assignment.html">Visualization in Python</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercises in Machine Learning</a></li>
+
 </ul>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../setup.html">
-   Software Setup
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../exercises.html">
-   Exercise Notebooks
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="00_tabula-webplotdigitizer_assignment.html">
-     Data Extraction and Management
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="01_python_assignment.html">
-     Intro to Python and Jupyter Notebooks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_tidy_assignment.html">
-     Intro to Data Wrangling and Tidy Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_data_assignment.html">
-     Programmatic Data Operations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../vis.html">
-     Principles of Visualization
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="04_vis_assignment.html">
-     Visualization in Python
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Exercises in Machine Learning
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../past.html">
-   Past Offerings of MI 101
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past/gatech2021.html">
-     GATech IMAT 2021 Workshop
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebooks/05_ml_assignment.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+</nav></div>
     </div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/zdelrosario/Materials Informatics 101"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/zdelrosario/Materials Informatics 101/issues/new?title=Issue%20on%20page%20%2Fnotebooks/05_ml_assignment.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/zdelrosario/Materials Informatics 101" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/zdelrosario/Materials Informatics 101/issues/new?title=Issue%20on%20page%20%2Fnotebooks/05_ml_assignment.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/zdelrosario/Materials Informatics 101/main?urlpath=tree/docs/notebooks/05_ml_assignment.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebooks/05_ml_assignment.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
     </div>
+  
 </div>
+</div>
+              
+              
 
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercises in Machine Learning</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Exercises in Machine Learning
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#learning-outcomes">
-     Learning outcomes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regression-helper-function">
-     Regression Helper Function
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#underfitting-and-overfitting">
-     Underfitting and Overfitting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#working-with-models-in-grama">
-       Working with models in Grama
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q1-evaluate-the-model-at-new-input-values">
-       <strong>
-        Q1
-       </strong>
-       : Evaluate the model at new input values
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-flexibility-and-underfitting">
-       Model Flexibility and
-       <em>
-        Underfitting
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q2-fit-a-quadratic-model-to-the-data">
-       <strong>
-        Q2
-       </strong>
-       : Fit a quadratic model to the data
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#noise-and-overfitting">
-       Noise and
-       <em>
-        Overfitting
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q3-overfit-the-model">
-       <strong>
-        Q3
-       </strong>
-       : Overfit the model
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#balancing-overfitting-and-underfitting">
-       Balancing Overfitting and Underfitting
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quantifying-error-and-cross-validating">
-     Quantifying Error and Cross-Validating
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#train-vs-test">
-       Train vs Test
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#avoiding-optimistic-estimates-cross-validation">
-       Avoiding Optimistic Estimates: Cross-Validation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q4-override-the-defaults">
-       <strong>
-        Q4
-       </strong>
-       : Override the defaults
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#case-study-steel-fatigue-strength-prediction">
-     Case Study: Steel Fatigue Strength Prediction
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q5-fit-a-regression-to-predict-the-fatigue-strength">
-       <strong>
-        Q5
-       </strong>
-       : Fit a regression to predict the fatigue strength
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-different-kind-of-flexibility-featurization">
-       A different kind of flexibility:
-       <em>
-        Featurization
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q6-interpret-the-following-results">
-       <strong>
-        Q6
-       </strong>
-       : Interpret the following results
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conclusion">
-       Conclusion
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#survey">
-   Survey
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#further-reading">
-     Further Reading
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercises in Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning outcomes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-helper-function">Regression Helper Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting-and-overfitting">Underfitting and Overfitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-models-in-grama">Working with models in Grama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-evaluate-the-model-at-new-input-values"><strong>Q1</strong>: Evaluate the model at new input values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-flexibility-and-underfitting">Model Flexibility and <em>Underfitting</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-fit-a-quadratic-model-to-the-data"><strong>Q2</strong>: Fit a quadratic model to the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#noise-and-overfitting">Noise and <em>Overfitting</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-overfit-the-model"><strong>Q3</strong>: Overfit the model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balancing-overfitting-and-underfitting">Balancing Overfitting and Underfitting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifying-error-and-cross-validating">Quantifying Error and Cross-Validating</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-vs-test">Train vs Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoiding-optimistic-estimates-cross-validation">Avoiding Optimistic Estimates: Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-override-the-defaults"><strong>Q4</strong>: Override the defaults</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-steel-fatigue-strength-prediction">Case Study: Steel Fatigue Strength Prediction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q5-fit-a-regression-to-predict-the-fatigue-strength"><strong>Q5</strong>: Fit a regression to predict the fatigue strength</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-different-kind-of-flexibility-featurization">A different kind of flexibility: <em>Featurization</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q6-interpret-the-following-results"><strong>Q6</strong>: Interpret the following results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#survey">Survey</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exercises in Machine Learning</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Exercises in Machine Learning
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#learning-outcomes">
-     Learning outcomes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#regression-helper-function">
-     Regression Helper Function
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#underfitting-and-overfitting">
-     Underfitting and Overfitting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#working-with-models-in-grama">
-       Working with models in Grama
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q1-evaluate-the-model-at-new-input-values">
-       <strong>
-        Q1
-       </strong>
-       : Evaluate the model at new input values
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#model-flexibility-and-underfitting">
-       Model Flexibility and
-       <em>
-        Underfitting
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q2-fit-a-quadratic-model-to-the-data">
-       <strong>
-        Q2
-       </strong>
-       : Fit a quadratic model to the data
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#noise-and-overfitting">
-       Noise and
-       <em>
-        Overfitting
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q3-overfit-the-model">
-       <strong>
-        Q3
-       </strong>
-       : Overfit the model
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#balancing-overfitting-and-underfitting">
-       Balancing Overfitting and Underfitting
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quantifying-error-and-cross-validating">
-     Quantifying Error and Cross-Validating
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#train-vs-test">
-       Train vs Test
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#avoiding-optimistic-estimates-cross-validation">
-       Avoiding Optimistic Estimates: Cross-Validation
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q4-override-the-defaults">
-       <strong>
-        Q4
-       </strong>
-       : Override the defaults
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#case-study-steel-fatigue-strength-prediction">
-     Case Study: Steel Fatigue Strength Prediction
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q5-fit-a-regression-to-predict-the-fatigue-strength">
-       <strong>
-        Q5
-       </strong>
-       : Fit a regression to predict the fatigue strength
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#a-different-kind-of-flexibility-featurization">
-       A different kind of flexibility:
-       <em>
-        Featurization
-       </em>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#q6-interpret-the-following-results">
-       <strong>
-        Q6
-       </strong>
-       : Interpret the following results
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conclusion">
-       Conclusion
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#survey">
-   Survey
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#further-reading">
-     Further Reading
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <!-- # Day 4 (Live) Exercises in Machine Learning -->
-<div class="tex2jax_ignore mathjax_ignore section" id="exercises-in-machine-learning">
-<h1>Exercises in Machine Learning<a class="headerlink" href="#exercises-in-machine-learning" title="Permalink to this headline">¶</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises-in-machine-learning">
+<h1>Exercises in Machine Learning<a class="headerlink" href="#exercises-in-machine-learning" title="Permalink to this heading">#</a></h1>
 <hr class="docutils" />
 <p><em>Author</em>: Zach del Rosario</p>
 <p>The <em>primary</em> purpose of this notebook is to help you <em>not get fooled by machine learning</em>! As Drew Conway notes, possessing hacking skills and substantive experience—but having no math or statistics background—puts one in the <a class="reference external" href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram">danger zone</a>. While we can’t possibly cover <em>everything</em> you need in a single workshop, this exercise will highlight some of the challenges of doing machine learning well. See the <em>Further Reading</em> section at the end for suggestions on learning more.</p>
-<div class="section" id="learning-outcomes">
-<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
+<section id="learning-outcomes">
+<h2>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this heading">#</a></h2>
 <p>By working through this notebook, you will be able to:</p>
 <ul class="simple">
 <li><p>Use grama to work with models.</p></li>
@@ -638,7 +455,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper functions</span>
 <span class="k">def</span> <span class="nf">add_noise</span><span class="p">(</span><span class="n">function</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">101</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add noise to deterministic functions</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add noise to deterministic functions</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">new_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
         <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
@@ -667,9 +484,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="regression-helper-function">
-<h2>Regression Helper Function<a class="headerlink" href="#regression-helper-function" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="regression-helper-function">
+<h2>Regression Helper Function<a class="headerlink" href="#regression-helper-function" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>This function will automate some steps so we can focus on high-level ideas, but I define it here in case you’d like to see the details.</p>
 <div class="cell docutils container">
@@ -711,7 +528,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="c1">## Fitting routine</span>
 <span class="nd">@curry</span>
 <span class="k">def</span> <span class="nf">fit_regression</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fit a linear regression of specified order</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Fit a linear regression of specified order</span>
 <span class="sd">    </span>
 <span class="sd">    Args:</span>
 <span class="sd">        df (DataFrame): Data for fitting</span>
@@ -743,9 +560,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="underfitting-and-overfitting">
-<h2>Underfitting and Overfitting<a class="headerlink" href="#underfitting-and-overfitting" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="underfitting-and-overfitting">
+<h2>Underfitting and Overfitting<a class="headerlink" href="#underfitting-and-overfitting" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>First we’ll cover some key ideas on simple cases. These are not ‘real’ data, but the simplicity of the examples will allow us to focus on concepts.</p>
 <p>Here I generate some data from a simple polynomial.</p>
@@ -800,8 +617,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">ft_regression()</span></code> tool returns a <em>grama model</em>; let’s learn about this toolset.</p>
-<div class="section" id="working-with-models-in-grama">
-<h3>Working with models in Grama<a class="headerlink" href="#working-with-models-in-grama" title="Permalink to this headline">¶</a></h3>
+<section id="working-with-models-in-grama">
+<h3>Working with models in Grama<a class="headerlink" href="#working-with-models-in-grama" title="Permalink to this heading">#</a></h3>
 <p>In addition to the data <em>transformation</em> tools we used in previous notebooks, grama provides a <em>model object</em> to simplify working with different forms of model. The <a class="reference external" href="https://py-grama.readthedocs.io/en/latest/">grama documentation</a> has more information, but let’s focus on the high-level details.</p>
 <p>Like with a DataFrame, we can get a view of the model simply by printing it out:</p>
 <div class="cell docutils container">
@@ -815,9 +632,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The text above is a summary of what’s in the model. Based on this summary, we can see that it takes a single input <code class="docutils literal notranslate"><span class="pre">x</span></code> and maps it to a single output <code class="docutils literal notranslate"><span class="pre">y_mean</span></code>. This can be particularly useful for checking the “basic facts” about the model: what inputs does it require? What outputs does it provide?</p>
 <p>Note that we fit a model to predict an output <code class="docutils literal notranslate"><span class="pre">y</span></code>, but our model provides <code class="docutils literal notranslate"><span class="pre">y_mean</span></code>. This renaming is deliberate; we’re providing a <em>predicted value</em>, not a <em>measured value</em>. Since our model is based on a <a class="reference external" href="https://en.wikipedia.org/wiki/Linear_regression#Interpretation">statistical mean</a>, the output gets the <code class="docutils literal notranslate"><span class="pre">_mean</span></code> suffix.</p>
 <p>One of the most important uses of a fitted model is to predict unobserved output values. We can do this with a grama model by providing values for the desired inputs and <em>evaluating</em> the model.</p>
-</div>
-<div class="section" id="q1-evaluate-the-model-at-new-input-values">
-<h3><strong>Q1</strong>: Evaluate the model at new input values<a class="headerlink" href="#q1-evaluate-the-model-at-new-input-values" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="q1-evaluate-the-model-at-new-input-values">
+<h3><strong>Q1</strong>: Evaluate the model at new input values<a class="headerlink" href="#q1-evaluate-the-model-at-new-input-values" title="Permalink to this heading">#</a></h3>
 <p>Use the function <code class="docutils literal notranslate"><span class="pre">gr.ev_df()</span></code> to evaluate the model <code class="docutils literal notranslate"><span class="pre">md_line</span></code> fitted above. Make use of the new set of input values <code class="docutils literal notranslate"><span class="pre">df_dense</span></code>. Answer the questions below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -864,14 +681,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="model-flexibility-and-underfitting">
-<h3>Model Flexibility and <em>Underfitting</em><a class="headerlink" href="#model-flexibility-and-underfitting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="model-flexibility-and-underfitting">
+<h3>Model Flexibility and <em>Underfitting</em><a class="headerlink" href="#model-flexibility-and-underfitting" title="Permalink to this heading">#</a></h3>
 <p>Note that we had to <em>assume</em> a model-form in order to do the fitting: <span class="math notranslate nohighlight">\(y_{\text{mean}} = m x + b\)</span>. From the figure above, we can see that the model is close to the true values, but obviously lacks the curvature of the true data-generating process.</p>
 <p>This phenomenon—the failure of a model to capture behavior in the data—is called <em>underfitting</em>. To reduce underfitting, we need to make our model <em>more flexible</em>. For a linear regression, we can do this by <strong>increasing the order</strong> of the regression.</p>
-</div>
-<div class="section" id="q2-fit-a-quadratic-model-to-the-data">
-<h3><strong>Q2</strong>: Fit a quadratic model to the data<a class="headerlink" href="#q2-fit-a-quadratic-model-to-the-data" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="q2-fit-a-quadratic-model-to-the-data">
+<h3><strong>Q2</strong>: Fit a quadratic model to the data<a class="headerlink" href="#q2-fit-a-quadratic-model-to-the-data" title="Permalink to this heading">#</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ft_regression()</span></code> helper to fit a quadratic model (<code class="docutils literal notranslate"><span class="pre">order</span> <span class="pre">=</span> <span class="pre">2</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -907,9 +724,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Here we can see the model fits the data <em>perfectly</em>. This <em>suggests</em> that we have successfully discovered the <em>exact</em> rule that generated these data, which in <em>this special case happens to be true</em>.</p>
 <p>However, we will very rarely be able to fit the true function exactly. This is because real data tend to have <em>noise</em>, which corrupts the underlying function we are trying to learn.</p>
-</div>
-<div class="section" id="noise-and-overfitting">
-<h3>Noise and <em>Overfitting</em><a class="headerlink" href="#noise-and-overfitting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="noise-and-overfitting">
+<h3>Noise and <em>Overfitting</em><a class="headerlink" href="#noise-and-overfitting" title="Permalink to this heading">#</a></h3>
 <p>Below, I generate data from the same model, but add a little bit of noise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -949,9 +766,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Here we can see that the fit is no longer perfect, despite coming from the “same” model. Since we already know that a quadratic can fit the underlying function perfectly, underfitting is not the issue here. Instead, the error is increased due to the noise in the data.</p>
 <p><em>However</em>, we have not yet seen a case of <em>overfitting</em>. To see that phenomenon, let’s keep increasing the order of the model.</p>
-</div>
-<div class="section" id="q3-overfit-the-model">
-<h3><strong>Q3</strong>: Overfit the model<a class="headerlink" href="#q3-overfit-the-model" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="q3-overfit-the-model">
+<h3><strong>Q3</strong>: Overfit the model<a class="headerlink" href="#q3-overfit-the-model" title="Permalink to this heading">#</a></h3>
 <p>Increase the <code class="docutils literal notranslate"><span class="pre">order</span></code> of the regression until the model goes through every measured point. Does this seem like a reasonable model?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -980,9 +797,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="balancing-overfitting-and-underfitting">
-<h3>Balancing Overfitting and Underfitting<a class="headerlink" href="#balancing-overfitting-and-underfitting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="balancing-overfitting-and-underfitting">
+<h3>Balancing Overfitting and Underfitting<a class="headerlink" href="#balancing-overfitting-and-underfitting" title="Permalink to this heading">#</a></h3>
 <p>To help illustrate, let’s look at one more synthetic example</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1050,10 +867,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>More generally, <em>overfitting</em> is when the model fits to spurrious patterns in the data; essentially, we are fitting to noise, rather than signal. We would like to detect and avoid overfitting in practice! While we can see above some suspicious behavior based on the fitted curves, we might like a <em>quantitative</em> way to compare models; in particular, once we have multiple inputs we won’t be able to create simple <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">vs</span> <span class="pre">x</span></code> plots like we do above.</p>
 <p>Additionally, there’s a <em>subtle</em> issue that we’ll run into when it comes to evaluating the accuracy of a model: The <code class="docutils literal notranslate"><span class="pre">Order</span> <span class="pre">=</span> <span class="pre">9</span></code> case <em>clearly</em> looks unstable and untrustworthy, but note that the model is <em>perfect</em> at the points where we have measured output values. This is going to present some issues that we’ll see below:</p>
-</div>
-</div>
-<div class="section" id="quantifying-error-and-cross-validating">
-<h2>Quantifying Error and Cross-Validating<a class="headerlink" href="#quantifying-error-and-cross-validating" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="quantifying-error-and-cross-validating">
+<h2>Quantifying Error and Cross-Validating<a class="headerlink" href="#quantifying-error-and-cross-validating" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>There are a wide variety of ways to quantify the accuracy of a model: The code below computes three example metrics.</p>
 <div class="cell docutils container">
@@ -1077,8 +894,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">ndme</span></code> stands for <em>non-dimensional model error</em>. As the name implies, this quantity is dimensionless, and takes a value of <code class="docutils literal notranslate"><span class="pre">0</span></code> when the model is perfect, and a value of <code class="docutils literal notranslate"><span class="pre">1</span></code> (sometimes higher) when the model is uninformative. This metric is not terribly common, but it is very <em>useful</em> as a dimensionless metric for error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rsq</span></code> is short for <span class="math notranslate nohighlight">\(R^2\)</span> (r-squared), also called the <a class="reference external" href="https://en.wikipedia.org/wiki/Coefficient_of_determination">coefficient of determination</a>, a common <em>goodness of fit</em> metric used in the statistics community. Higher values are more accurate, with <span class="math notranslate nohighlight">\(R^2 = 1\)</span> indicating a perfect fit.</p></li>
 </ul>
-<div class="section" id="train-vs-test">
-<h3>Train vs Test<a class="headerlink" href="#train-vs-test" title="Permalink to this headline">¶</a></h3>
+<section id="train-vs-test">
+<h3>Train vs Test<a class="headerlink" href="#train-vs-test" title="Permalink to this heading">#</a></h3>
 <p>Remember above how the <code class="docutils literal notranslate"><span class="pre">order</span> <span class="pre">=</span> <span class="pre">9</span></code> model looked untrustworthy, but went through all of our observed data points? Let’s quantify the error both on the available data (the <code class="docutils literal notranslate"><span class="pre">train</span></code> data), but check the model’s behavior on an independent set of observations (the <code class="docutils literal notranslate"><span class="pre">test</span></code> data). The code below plots error estimated using these two different sets of data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1106,14 +923,14 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>Here we can see the <code class="docutils literal notranslate"><span class="pre">train</span></code> and <code class="docutils literal notranslate"><span class="pre">test</span></code> error values <em>greatly diverge</em>. This is <em>highly problematic</em> for two interrelated reasons:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>In practice, we would only have access to the <code class="docutils literal notranslate"><span class="pre">train</span></code> curve, as the <code class="docutils literal notranslate"><span class="pre">test</span></code> curve relies on extra data (that we don’t have).</p></li>
 <li><p>If we were to make a decision about <code class="docutils literal notranslate"><span class="pre">Polynomial</span> <span class="pre">Order</span></code> based on the <code class="docutils literal notranslate"><span class="pre">train</span></code> curve, we would choose a much higher order than what would minimize the NDME in the <code class="docutils literal notranslate"><span class="pre">True</span></code> case.</p></li>
 </ol>
 <p>The underlying reason for the poor error estimate here is that <em>we are using the same data to both train and test the model</em>. We can improve our estimates for the error through various techniques; below, we will use the technique of <em>cross-validation</em>.</p>
-</div>
-<div class="section" id="avoiding-optimistic-estimates-cross-validation">
-<h3>Avoiding Optimistic Estimates: Cross-Validation<a class="headerlink" href="#avoiding-optimistic-estimates-cross-validation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="avoiding-optimistic-estimates-cross-validation">
+<h3>Avoiding Optimistic Estimates: Cross-Validation<a class="headerlink" href="#avoiding-optimistic-estimates-cross-validation" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation</a> is one technique for estimating the error in a way that avoids the “optimism” we saw above. For the variant <em>k-fold cross-validation</em> (k-fold CV), we split all our data into <em>folds</em>, and use these to build <em>training</em> and <em>test</em> sets. Generally:</p>
 <ul class="simple">
 <li><p><em>Training</em> data are used to fit a model</p></li>
@@ -1140,9 +957,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>Note that the k-fold CV estimated <code class="docutils literal notranslate"><span class="pre">rsq_y</span></code> values are <em>abysmal</em>; they take negative values, which indicates that the model performance is quite bad.</p>
 <p>One powerful use of k-fold CV is to do a <em>hyperparameter study</em>: In our case, we’ll study how the model accuracy changes as we sweep over the polynomial order.</p>
-</div>
-<div class="section" id="q4-override-the-defaults">
-<h3><strong>Q4</strong>: Override the defaults<a class="headerlink" href="#q4-override-the-defaults" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="q4-override-the-defaults">
+<h3><strong>Q4</strong>: Override the defaults<a class="headerlink" href="#q4-override-the-defaults" title="Permalink to this heading">#</a></h3>
 <p>Complete the code below by overriding the default settings for <code class="docutils literal notranslate"><span class="pre">tf_kfolds()</span></code>. Provide an estimate of the non-dimensional model error (<code class="docutils literal notranslate"><span class="pre">gr.ndme</span></code>). You can also try changing the value of <code class="docutils literal notranslate"><span class="pre">k</span></code> to see how the results change.</p>
 <p>Answer the questions under <em>Observations</em> below.</p>
 <p><em>Hint:</em> You may find that the code throws errors for larger values of <code class="docutils literal notranslate"><span class="pre">k</span></code>. Think about how many data points you have available in <code class="docutils literal notranslate"><span class="pre">df_ex3</span></code>. How many folds can you split the data into while having more than just one point in each fold?</p>
@@ -1208,10 +1025,10 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Across various communities, the terms “train”, “test”, and “validation” data are used somewhat inconsistently. The term “train” is used most consistently: The training data is a subset of data used to fit the model. However different authors use the terms “test” and “validation” interchangeably.</p>
 <p>What’s truly important is that you keep in mind the <strong>purpose</strong> of data subsets: Which subset is being used to fit the model? (Train) Which subset is being used to estimate error for hyperparameter tuning? (Test or Validation) Do you have a third disjoint subset to give an unbiased error estimate? (Validation or Test). For more information, see the relevant <a class="reference external" href="https://en.wikipedia.org/wiki/Training,_validation,_and_test_sets">Wikipedia article</a>.</p>
 </div>
-</div>
-</div>
-<div class="section" id="case-study-steel-fatigue-strength-prediction">
-<h2>Case Study: Steel Fatigue Strength Prediction<a class="headerlink" href="#case-study-steel-fatigue-strength-prediction" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="case-study-steel-fatigue-strength-prediction">
+<h2>Case Study: Steel Fatigue Strength Prediction<a class="headerlink" href="#case-study-steel-fatigue-strength-prediction" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>So far, we’ve looked at fairly artificial modeling problems. To help illustrate these fitting and cross-validation ideas in a real materials problem, let’s look at predicting the fatigue strength of steel alloys.</p>
 <p>The data for this case study come from <a class="reference external" href="https://link.springer.com/article/10.1186/2193-9772-3-8">Agrawal et al. (2014) <em>IMMI</em></a>.</p>
@@ -1293,8 +1110,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="q5-fit-a-regression-to-predict-the-fatigue-strength">
-<h3><strong>Q5</strong>: Fit a regression to predict the fatigue strength<a class="headerlink" href="#q5-fit-a-regression-to-predict-the-fatigue-strength" title="Permalink to this headline">¶</a></h3>
+<section id="q5-fit-a-regression-to-predict-the-fatigue-strength">
+<h3><strong>Q5</strong>: Fit a regression to predict the fatigue strength<a class="headerlink" href="#q5-fit-a-regression-to-predict-the-fatigue-strength" title="Permalink to this heading">#</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">ft_regression()</span></code> helper to fit a regression (with 1st order) to predict the fatigue strength.</p>
 <p>Answer the questions under <em>Observations</em> below.</p>
 <div class="cell docutils container">
@@ -1343,9 +1160,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="a-different-kind-of-flexibility-featurization">
-<h3>A different kind of flexibility: <em>Featurization</em><a class="headerlink" href="#a-different-kind-of-flexibility-featurization" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="a-different-kind-of-flexibility-featurization">
+<h3>A different kind of flexibility: <em>Featurization</em><a class="headerlink" href="#a-different-kind-of-flexibility-featurization" title="Permalink to this heading">#</a></h3>
 <p>What if we wanted to use the chemical composition as a feature? We can’t use the string as it is (what would <span class="math notranslate nohighlight">\(m \times \text{string}\)</span> <em>mean</em>?). Instead, we can go through a process of <em>featurization</em> (also called <a class="reference external" href="https://en.wikipedia.org/wiki/Feature_engineering">feature engineering</a>) to create usable numeric columns that our model can use as inputs.</p>
 <p>Featurization is a <em>big</em> topic, one that is inherently problem-specific. To get us started, we’re going to use a featurization scheme by <a class="reference external" href="https://www.nature.com/articles/npjcompumats201628?report=reader">Ward et al. (2016)</a>, as-implemented in the <a class="reference external" href="https://hackingmaterials.lbl.gov/matminer/">matminer</a> python package.</p>
 <p>The following code applies the featurizer to our chemical formula column.</p>
@@ -1384,9 +1201,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="q6-interpret-the-following-results">
-<h3><strong>Q6</strong>: Interpret the following results<a class="headerlink" href="#q6-interpret-the-following-results" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="q6-interpret-the-following-results">
+<h3><strong>Q6</strong>: Interpret the following results<a class="headerlink" href="#q6-interpret-the-following-results" title="Permalink to this heading">#</a></h3>
 <p>The following code estimates model accuracy both with and without the Magpie (composition) features. Compare the results and answer the questions under <em>Observations</em> below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1455,26 +1272,26 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="conclusion">
-<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h3>
 <p>And that’s it! One could certainly take this case study further (<em>hint</em>: it would be interesting to see how different the alloys are in composition…), but hopefully this already gives you a sense for the kinds of investigations you can do in materials informatics.</p>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="survey">
-<h1>Survey<a class="headerlink" href="#survey" title="Permalink to this headline">¶</a></h1>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="survey">
+<h1>Survey<a class="headerlink" href="#survey" title="Permalink to this heading">#</a></h1>
 <hr class="docutils" />
 <p>Once you complete this activity, please fill out the following 30-second survey:</p>
 <blockquote>
 <div><p><a class="reference external" href="https://forms.gle/XAFZeyyfiP86CCvN8">Survey link</a></p>
 </div></blockquote>
-<div class="section" id="further-reading">
-<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <hr class="docutils" />
 <p>One of my favorite books on these ideas is <a class="reference external" href="https://www.statlearning.com/">An Introduction to Statistical Learning</a>. The authors have made PDF’s of the first and second editions <em>freely available</em>. This book does an excellent job of speaking to non-statisticians, while also not sacrificing statistical rigor. I highly recommend it!</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1488,7 +1305,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks"
         },
         predefinedOutput: true
@@ -1496,44 +1313,128 @@ const thebe_selector_output = ".output, .cell_output"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_vis_assignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Visualization in Python</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Exercises in Machine Learning</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning outcomes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-helper-function">Regression Helper Function</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underfitting-and-overfitting">Underfitting and Overfitting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-models-in-grama">Working with models in Grama</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-evaluate-the-model-at-new-input-values"><strong>Q1</strong>: Evaluate the model at new input values</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-flexibility-and-underfitting">Model Flexibility and <em>Underfitting</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-fit-a-quadratic-model-to-the-data"><strong>Q2</strong>: Fit a quadratic model to the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#noise-and-overfitting">Noise and <em>Overfitting</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-overfit-the-model"><strong>Q3</strong>: Overfit the model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#balancing-overfitting-and-underfitting">Balancing Overfitting and Underfitting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantifying-error-and-cross-validating">Quantifying Error and Cross-Validating</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#train-vs-test">Train vs Test</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoiding-optimistic-estimates-cross-validation">Avoiding Optimistic Estimates: Cross-Validation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-override-the-defaults"><strong>Q4</strong>: Override the defaults</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#case-study-steel-fatigue-strength-prediction">Case Study: Steel Fatigue Strength Prediction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q5-fit-a-regression-to-predict-the-fatigue-strength"><strong>Q5</strong>: Fit a regression to predict the fatigue strength</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-different-kind-of-flexibility-featurization">A different kind of flexibility: <em>Featurization</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q6-interpret-the-following-results"><strong>Q6</strong>: Interpret the following results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#survey">Survey</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="04_vis_assignment.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Visualization in Python</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../past.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Past Offerings of MI 101</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
+          </div>
+          <footer class="bd-footer-content">
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Zachary del Rosario<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Zachary del Rosario
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
