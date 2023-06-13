@@ -399,6 +399,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-one-step-pivot">Bonus: One-step pivot</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#targeting-variability-with-summaries">Targeting Variability with Summaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q11-consider-the-consequences-of-variability-in-e"><strong>Q11</strong> Consider the consequences of variability in <code class="docutils literal notranslate"><span class="pre">E</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summaries">Summaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q12-compute-a-summary"><strong>Q12</strong> Compute a summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-summaries">Grouped summaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q13-compute-a-grouped-summary"><strong>Q13</strong> Compute a grouped summary</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#survey">Survey</a><ul class="visible nav section-nav flex-column">
@@ -1164,7 +1172,7 @@ document.write(`
 </section>
 <section id="bonus-one-step-pivot">
 <h3>Bonus: One-step pivot<a class="headerlink" href="#bonus-one-step-pivot" title="Permalink to this heading">#</a></h3>
-<p>As a closing, bonus demonstration, we illustrate some advanced options in <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_longer()</span></code> that would allow you to reshape the data in single call. This uses the <code class="docutils literal notranslate"><span class="pre">&quot;.value&quot;</span></code> special argument to signal that the values that would be placed in that <code class="docutils literal notranslate"><span class="pre">names_to</span></code> column should really be column names themselves; put differently, the <code class="docutils literal notranslate"><span class="pre">&quot;.value&quot;</span></code> keyword is like adding a pivot wider after the pivot longer.</p>
+<p>As a bonus demonstration, we illustrate some advanced options in <code class="docutils literal notranslate"><span class="pre">gr.tf_pivot_longer()</span></code> that would allow you to reshape the data in single call. This uses the <code class="docutils literal notranslate"><span class="pre">&quot;.value&quot;</span></code> special argument to signal that the values that would be placed in that <code class="docutils literal notranslate"><span class="pre">names_to</span></code> column should really be column names themselves; put differently, the <code class="docutils literal notranslate"><span class="pre">&quot;.value&quot;</span></code> keyword is like adding a pivot wider after the pivot longer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## NOTE: No need to edit</span>
@@ -1180,6 +1188,143 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="targeting-variability-with-summaries">
+<h2>Targeting Variability with Summaries<a class="headerlink" href="#targeting-variability-with-summaries" title="Permalink to this heading">#</a></h2>
+<p>To close, let’s practice targeting the variability in a dataset. Remember that, in order to target variability, we need to first think about the consequences of variability for our specific engineering scenario.</p>
+<section id="q11-consider-the-consequences-of-variability-in-e">
+<h3><strong>Q11</strong> Consider the consequences of variability in <code class="docutils literal notranslate"><span class="pre">E</span></code><a class="headerlink" href="#q11-consider-the-consequences-of-variability-in-e" title="Permalink to this heading">#</a></h3>
+<p>Imagine we plan to design a part using the aluminum described in the dataset <code class="docutils literal notranslate"><span class="pre">df_stang</span></code>. This part will be a flat plate that will take in-plane tensile loads. We need the plate to deform less than some critical value under a defined load, in order to make sure an assembly maintains the correct shape.</p>
+<p>Answer the following questions:</p>
+<ul class="simple">
+<li><p>Imagine that that the elastic modulus <code class="docutils literal notranslate"><span class="pre">E</span></code> for an individual plate is <em>larger</em> than it typically is; what consequences might this have for the assembly?</p>
+<ul>
+<li><p>(Write your response here)</p></li>
+</ul>
+</li>
+<li><p>Imagine that that the elastic modulus <code class="docutils literal notranslate"><span class="pre">E</span></code> for an individual plate is <em>smaller</em> than it typically is; what consequences might this have for the assembly?</p>
+<ul>
+<li><p>(Write your response here)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="summaries">
+<h3>Summaries<a class="headerlink" href="#summaries" title="Permalink to this heading">#</a></h3>
+<p>While <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code> creates a new column, we can use <code class="docutils literal notranslate"><span class="pre">gr.tf_summarize()</span></code> to compute <em>summaries</em>. These typically reduce the many rows of a dataframe down to just one row. For instance, we can compute the mean of all the elasticity values with the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: No need to edit, run and inspect</span>
+<span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Like with <code class="docutils literal notranslate"><span class="pre">gr.tf_mutate()</span></code>, we can compute multiple summaries in the same function call:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NOTE: No need to edit, run and inspect</span>
+<span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">mu_min</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+        <span class="n">mu_max</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a variety of summary functions that are provided by grama. A few of the important ones are given below:</p>
+<ul class="simple">
+<li><p>Location: <code class="docutils literal notranslate"><span class="pre">gr.mean(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.median(DF.x)</span></code></p></li>
+<li><p>Extremes: <code class="docutils literal notranslate"><span class="pre">gr.min(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.max(DF.x)</span></code></p></li>
+<li><p>Spread (variability): <code class="docutils literal notranslate"><span class="pre">gr.sd(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.var(DF.x)</span></code>, <code class="docutils literal notranslate"><span class="pre">gr.IQR(DF.x)</span></code></p></li>
+</ul>
+</section>
+<section id="q12-compute-a-summary">
+<h3><strong>Q12</strong> Compute a summary<a class="headerlink" href="#q12-compute-a-summary" title="Permalink to this heading">#</a></h3>
+<p>Using your responses from Q11, compute a summary (or summaries!) of the data in <code class="docutils literal notranslate"><span class="pre">df_stang</span></code> that target the variability in <code class="docutils literal notranslate"><span class="pre">E</span></code>. Answer the questions below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###</span>
+<span class="c1"># TASK: Compute a summary (or summaries!) of `E` that target(s) the variability</span>
+<span class="c1">###</span>
+
+<span class="p">(</span>
+    <span class="n">df_stang</span>
+<span class="c1"># -- WRITE YOUR CODE HERE -----</span>
+    <span class="c1">## Use gr.tf_summarize()</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Observations</em></p>
+<ul class="simple">
+<li><p>(For each summary you compute, describe how that summary addresses the consequences of variability in <code class="docutils literal notranslate"><span class="pre">E</span></code>)</p></li>
+</ul>
+</section>
+<section id="grouped-summaries">
+<h3>Grouped summaries<a class="headerlink" href="#grouped-summaries" title="Permalink to this heading">#</a></h3>
+<p>Rather than summarize over the entire dataset, we can use <code class="docutils literal notranslate"><span class="pre">gr.tf_group_by()</span></code> to compute summaries within groupings of the data. For instance, the following code computes the mean of <code class="docutils literal notranslate"><span class="pre">E</span></code> and <code class="docutils literal notranslate"><span class="pre">mu</span></code> within unique groups of the measurement angle <code class="docutils literal notranslate"><span class="pre">ang</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">df_stang</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_group_by</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">ang</span><span class="p">)</span>
+    <span class="o">&gt;&gt;</span> <span class="n">gr</span><span class="o">.</span><span class="n">tf_summarize</span><span class="p">(</span>
+        <span class="n">E_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">E</span><span class="p">),</span>
+        <span class="n">mu_mean</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">DF</span><span class="o">.</span><span class="n">mu</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Grouped summaries can help with detecting differences across cases, as you’ll practice in the next question.</p>
+</section>
+<section id="q13-compute-a-grouped-summary">
+<h3><strong>Q13</strong> Compute a grouped summary<a class="headerlink" href="#q13-compute-a-grouped-summary" title="Permalink to this heading">#</a></h3>
+<p>Repeat the summaries you computed in <strong>Q12</strong>, but additionally group by the specimen thickness (<code class="docutils literal notranslate"><span class="pre">thick</span></code>). Answer the questions below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###</span>
+<span class="c1"># TASK: Compute a summary (or summaries!) of `E` that target(s) the variability</span>
+<span class="c1">#       group this summary by the thickness (`thick`)</span>
+<span class="c1">###</span>
+
+<span class="p">(</span>
+    <span class="n">df_stang</span>
+<span class="c1"># -- WRITE YOUR CODE HERE -----</span>
+    <span class="c1">## Use gr.tf_group_by() and gr.tf_summarize()</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Observations</em></p>
+<ul class="simple">
+<li><p>Are any of your summaries “significantly” different for certain thicknesses?</p>
+<ul>
+<li><p>(Write your response here)</p></li>
+</ul>
+</li>
+<li><p>How would your observation(s) for the previous question affect targeting the consequences of variability?</p>
+<ul>
+<li><p>(Write your response here)</p></li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 </section>
@@ -1302,6 +1447,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q9-use-gr-tf-separate-to-separate-the-measurement-identifiers-e-mu-from-the-measurement-angles-make-sure-to-call-the-angle-column-angle"><strong>Q9</strong> Use <code class="docutils literal notranslate"><span class="pre">gr.tf_separate()</span></code> to separate the measurement identifiers <code class="docutils literal notranslate"><span class="pre">"E",</span> <span class="pre">"mu"</span></code> from the measurement angles. Make sure to call the angle column <code class="docutils literal notranslate"><span class="pre">"angle"</span></code>.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q10-pivot-the-data-wider-to-turn-the-measurement-identifiers-e-mu-back-into-column-names"><strong>Q10</strong> Pivot the data wider to turn the measurement identifiers <code class="docutils literal notranslate"><span class="pre">"E",</span> <span class="pre">"mu"</span></code> back into column names.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-one-step-pivot">Bonus: One-step pivot</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#targeting-variability-with-summaries">Targeting Variability with Summaries</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q11-consider-the-consequences-of-variability-in-e"><strong>Q11</strong> Consider the consequences of variability in <code class="docutils literal notranslate"><span class="pre">E</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summaries">Summaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q12-compute-a-summary"><strong>Q12</strong> Compute a summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-summaries">Grouped summaries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q13-compute-a-grouped-summary"><strong>Q13</strong> Compute a grouped summary</a></li>
 </ul>
 </li>
 </ul>
