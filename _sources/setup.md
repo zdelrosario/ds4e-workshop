@@ -161,7 +161,7 @@ run the following jupyter notebook.
 
 ```{admonition} Test your installation
 Download and run
-[check_install.ipynb](https://raw.githubusercontent.com/zdelrosario/mi101/main/mi101/notebooks/check_install.ipynb).
+[check_install.ipynb](https://raw.githubusercontent.com/zdelrosario/ds4e-workshop/build/check_install.ipynb).
 This is also included in the `exercises.zip` file above.
 
 Navigate to the folder where you downloaded `check_install.ipynb`,
