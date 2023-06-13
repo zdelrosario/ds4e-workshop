@@ -6,6 +6,7 @@ sections:
   sections:
   - file: notebooks/00_python_assignment
   - file: notebooks/01_tabula-webplotdigitizer_assignment
+  - file: targeting
   - file: notebooks/02_tidy_assignment
   - file: notebooks/03_data_assignment
   - file: vis
