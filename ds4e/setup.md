@@ -99,18 +99,20 @@ we use a program to look at *directories*. Your terminal does something similar
 -- at any point it is *located* in a particular *directory*. The following
 screenshot illustrates `c`hanging `d`irectories (`cd`) to my `Downloads` folder,
 then `l`i`s`ting (`ls`) the contents of said directory. This is where I placed
-the `exercises.zip` archive for the workshop. (Note: On Windows, you must use
+the `ds4e-workshop-build.zip` archive for the workshop. (Note: On Windows, you must use
 the command `dir`, rather than `ls`.)
 
 ![terminal change directories](./images/terminal_cd.png)
 
-I unzip the archive `exercises.zip` from within terminal with the command `unzip
-exercises.zip -d exercises`, which results in the following:
+I unzip the archive `ds4e-workshop-build.zip` from within terminal with the command `unzip
+ds4e-workshop-build.zip -d exercises`, which results in the following:
 
 ![terminal unzip](./images/terminal_unzip.png)
 
 *Note*: On Windows, instead of `unzip`, you will need to run `tar -xf
-exercises.zip`.
+ds4e-workshop-build.zip`. Note that it may create a folder with the name
+`ds4e-workshop-build` instead, which means you would need to run `cd
+ds4e-workshop-build`.
 
 I can then `cd` into the unzipped folder and install the required Python
 packages with `pip install -r requirements.txt`. However, I can only do this
